@@ -38,7 +38,7 @@ module PLSQL
 
     def self.driver_type #:nodoc:
       # MRI 1.8.6 or YARV 1.9.1
-      @driver_type ||= if (!defined?(RUBY_ENGINE) || RUBY_ENGINE == "ruby") && defined?(OCI8)
+      @driver_type ||= if (!defined?(RUBY_ENGINE) || (RUBY_ENGINE == "ruby" ||  RUBY_ENGINE == "truffleruby")) && defined?(OCI8)
         :oci
       # JRuby
       elsif (defined?(RUBY_ENGINE) && RUBY_ENGINE == "jruby")

@@ -19,6 +19,7 @@ group :test, :development do
   end
 
   platforms :ruby, :mswin, :mingw do
-    gem "ruby-oci8", "~> 2.1"
+    #gem "ruby-oci8", "~> 2.1"
+    gem "ruby-oci8", git: 'https://github.com/bjfish/ruby-oci8.git', branch: 'truffleruby-ci'
   end
 end

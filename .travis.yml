@@ -28,7 +28,7 @@ install:
   - .travis/oracle/download.sh
   - .travis/oracle/install.sh
   - .travis/setup_accounts.sh
-  - bundle install --without=development
+  - bundle install
 
 language: ruby
 rvm:
@@ -39,6 +39,7 @@ rvm:
   - jruby-9.2.7.0
   - ruby-head
   - jruby-head
+  - truffleruby-head
 
 gemfile:
     - Gemfile
